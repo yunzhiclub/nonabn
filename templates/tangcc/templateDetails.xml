@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	client="site">
+	<name>tangcc</name>
+	<creationDate>08/02/14</creationDate>
+	<author>Pan Jie</author>
+	<authorEmail>3792535@qq.com</authorEmail>
+	<authorUrl>http://clxy.hebut.edu.cn</authorUrl>
+	<copyright>Copyright (C) 2005 - 2014 hebut, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>2.5.0</version>
+	<!--if install theme sucess , will display the below message-->
+	<description>hello</description>
+	<files>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>position-7</position>
+		<position>logo</position>
+		<position>menu</position>
+		<position>nav</position>
+		<position>content</position>
+		<position>left-menu</position>
+		<position>home-papers</position>
+		<position>home-workReports</position>
+		<position>home-login</position>
+		<position>login</position>
+		<position>hots</position>
+		<position>news</position>
+		<position>rightCenter</position>
+		<position>searchFiled</position>
+		<position>home-members</position>
+		<position>home-share</position>
+		<position>home-results</position>
+		<position>home-silder</position>
+		<position>home-news</position>
+		<position>home-activities</position>
+		<position>rightRight</position>
+		<position>footer</position>
+	</positions>
+
+	<!-- 	For core templates, we also install/uninstall the language files in the core language folders.
+	-->
+	<!--languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_atomic.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_atomic.sys.ini</language>
+	</languages-->
+
+</extension>

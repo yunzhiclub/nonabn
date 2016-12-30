@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="2.5" type="plugin" group="content" method="ugprade">
+	<name>plg_content_cdaccesstext</name>
+	<author>Daniel Rataj</author>
+	<creationDate>January 27th, 2012</creationDate>
+	<copyright>(C) 2007 - 2012 Great Joomla! All rights reserved.
+	</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL 3</license>
+	<authorEmail>info@greatjoomla.com</authorEmail>
+	<authorUrl>www.greatjoomla.com</authorUrl>
+	<version>2.5.x.2.0.2</version>
+	<description>PLG_CONTENT_CDACCESSTEXT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="cdaccesstext">cdaccesstext.php</filename>
+		<filename>index.html</filename>
+		<filename>license-gpl.txt</filename>
+		<folder>language</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_cdaccesstext.ini
+		</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_cdaccesstext.sys.ini
+		</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="set_mode" type="list" default="password" label="PLG_CONTENT_CDACCESSTEXT_LABEL_MODE"
+					description="PLG_CONTENT_CDACCESSTEXT_DESC_MODE">
+					<option value="user">PLG_CONTENT_CDACCESSTEXT_PARAM_MODE_USER</option>
+					<option value="level">PLG_CONTENT_CDACCESSTEXT_PARAM_MODE_LEVEL</option>
+				</field>
+				<field name="disable" type="list" default="yes" label="PLG_CONTENT_CDACCESSTEXT_LABEL_DISABLE"
+					description="PLG_CONTENT_CDACCESSTEXT_DESC_DISABLE">
+					<option value="yes">PLG_CONTENT_CDACCESSTEXT_PARAM_DISABLE_YES</option>
+					<option value="no">PLG_CONTENT_CDACCESSTEXT_PARAM_DISABLE_NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</install>

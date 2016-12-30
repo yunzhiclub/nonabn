@@ -1,0 +1,79 @@
+.vtem_news_stack {
+    position:relative;
+}
+.vtem_news_stack img.vtem-carousel-image {
+    border:0;
+	margin:0;
+	display:block;
+	width:100%;
+	height:100%;
+}
+.vtem_news_stack .carousel-feature {
+    position:absolute;
+    top:-1000px;
+    left:-1000px;
+    cursor:pointer;
+	overflow:hidden !important;
+}
+.vtem_news_stack .carousel-feature img{display:block; width:100%; height:100%;}
+.vtem_news_stack .carousel-feature > div {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background-color:black;
+    width:100%;
+}
+.vtem_news_stack .tracker-summation-container,.vtem_news_stack_nav3 .vtem_news_stack .tracker-individual-container{display:none !important;}
+.vtem_news_stack .tracker-individual-container{
+margin:0 auto;
+padding:0;
+list-style:none;
+position:absolute;
+bottom:35px;
+right:10px;
+}
+.vtem_news_stack .tracker-individual-container .tracker-individual-blip {
+padding:0;
+width:20px;
+height:20px;
+line-height:20px;
+color:#222;
+margin:1px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+font-weight:bold;
+font-size:11px;
+text-align:center !important;
+}
+.vtem_news_stack .carousel-feature .carousel-caption td.vt_main{padding:5px;}
+.vtem_news_stack .carousel-feature .carousel-caption td.vt_main .readmore_stack{
+display:block;
+text-transform:uppercase;
+font-size:80%;
+text-align:right;
+background:url(../images/arrow.png) right center no-repeat;
+padding-right:12px;
+text-decoration:none !important;
+}
+.vtem_news_stack .carousel-feature .carousel-caption td.vt_main h4{
+text-transform:uppercase;
+margin:0; padding:2px 0;
+font-size:120%;
+}
+.vtem_counterstyle2 .vtem_news_stack .tracker-individual-container .tracker-individual-blip{
+background:url(../images/nav2.png) left top no-repeat;
+}
+.vtem_counterstyle2 .vtem_news_stack .tracker-individual-container .tracker-individual-blip-selected{
+background-position:left bottom;
+}
+.vtem_counterstyle1 .vtem_news_stack .tracker-individual-container .tracker-individual-blip{
+background:url(../images/nav1.png) left top no-repeat;
+text-align:center !important;
+line-height:20px;
+font-weight:bold;
+}
+.vtem_counterstyle1 .vtem_news_stack .tracker-individual-container .tracker-individual-blip-selected{
+background-position:left bottom;
+}
+.vtem_counterstyle3 .vtem_news_stack .tracker-individual-container .tracker-individual-blip,.vtem_counterstyle2 .vtem_news_stack .tracker-individual-container .tracker-individual-blip{text-indent:-999999px;}

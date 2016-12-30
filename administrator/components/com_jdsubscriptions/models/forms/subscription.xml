@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="id" type="text" default="0" label="COM_JDSUBSCRIPTIONS_FORM_LBL_SUBSCRIPTION_ID"
+                     readonly="true" class="readonly"
+                     description="JGLOBAL_FIELD_ID_DESC" /> 
+
+        <field name="subscription_plan" type="sql" class="inputbox"
+        
+              label="COM_JDSUBSCRIPTIONS_FORM_LBL_SUBSCRIPTION_SUBSCRIPTION_PLAN"
+              description="COM_JDSUBSCRIPTIONS_FORM_DESC_SUBSCRIPTION_SUBSCRIPTION_PLAN" 
+        
+        
+        
+              required="true" 
+              query="SELECT 0 AS `id`, '- Select Subscription Plan -' AS `name` UNION SELECT `id`, `name` FROM `#__jdsubscriptions_plans`" key_field="id" value_field="name"
+         /> 
+
+        <field name="filter_subscription_plan" type="sql" class="inputbox"
+              onchange="this.form.submit();"
+              query="SELECT 0 AS `id`, '- Select Subscription Plan -' AS `name` UNION SELECT `id`, `name` FROM `#__jdsubscriptions_plans`" key_field="id" value_field="name"
+             /> 
+
+       
+        <field name="subscriber" type="user"               
+               label="COM_JDSUBSCRIPTIONS_FORM_LBL_SUBSCRIPTION_SUBSCRIBER"
+               description="COM_JDSUBSCRIPTIONS_FORM_DESC_SUBSCRIPTION_SUBSCRIBER"               
+                 /> 
+        
+     
+   
+
+        <field name="status" type="list"
+                
+              label="COM_JDSUBSCRIPTIONS_FORM_LBL_SUBSCRIPTION_STATUS"
+              description="COM_JDSUBSCRIPTIONS_FORM_DESC_SUBSCRIPTION_STATUS" 
+              default="active" 
+                
+        >
+            <option value="active">Active</option>
+            <option value="expired">Expired</option>
+            <option value="cancelled">Canceled</option>
+        </field> 
+
+ 
+        <field name="filter_status" type="list" onchange="this.form.submit();">
+            <option value="">COM_JDSUBSCRIPTIONS_SUBSCRIPTIONS_STATUS_FILTER</option>
+            <option value="active">Active</option>
+            <option value="expired">Expired</option>
+            <option value="cancelled">Canceled</option>
+        </field> 
+
+        <!--<field name="start_date" type="text" size="40" class="inputbox"
+        
+              label="COM_JDSUBSCRIPTIONS_FORM_LBL_SUBSCRIPTION_START_DATE"
+              description="COM_JDSUBSCRIPTIONS_FORM_DESC_SUBSCRIPTION_START_DATE" 
+        
+        
+        
+              filter="safehtml" /> 
+
+        <field name="end_date" type="text" size="40" class="inputbox"
+        
+              label="COM_JDSUBSCRIPTIONS_FORM_LBL_SUBSCRIPTION_END_DATE"
+              description="COM_JDSUBSCRIPTIONS_FORM_DESC_SUBSCRIPTION_END_DATE" 
+        
+        
+        
+              filter="safehtml" /> 
+	-->
+
+
+        <field name="created_by" type="createdby" default="" 
+              label="COM_JDSUBSCRIPTIONS_FORM_LBL_SUBSCRIPTION_CREATED_BY"
+              description="COM_JDSUBSCRIPTIONS_FORM_DESC_SUBSCRIPTION_CREATED_BY"  /> 
+
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field> 
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+    </fieldset>
+
+</form>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="name" type="text"
+                
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_NAME"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_NAME" 
+                
+                
+                 required="true"  /> 
+
+       <field name="description" type="textarea"
+                
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_DESCRIPTION"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_DESCRIPTION" 
+                
+                
+                
+            cols="100"
+            rows="8" /> 
+
+       <field name="subscription_image" type="media"
+                
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_SUBSCRIPTION_IMAGE"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_SUBSCRIPTION_IMAGE" 
+                
+                
+                
+            directory="subscription_images" /> 
+
+       <field name="duration" type="text" size="40" class="inputbox"
+        
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_DURATION"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_DURATION" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="unit" type="list"
+                
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_UNIT"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_UNIT" 
+                 default="days" 
+                
+                 required="true" >
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+                <option value="years">Years</option>
+        </field> 
+
+ 
+		<field name="filter_unit" type="list" onchange="this.form.submit();">
+			<option value="">COM_JDSUBSCRIPTIONS_PLANS_UNIT_FILTER</option>
+			<option value="days">Days</option>
+			<option value="weeks">Weeks</option>
+			<option value="months">Months</option>
+			<option value="years">Years</option>
+		</field> 
+
+       <field name="price" type="text"
+                
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_PRICE"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_PRICE" 
+                
+                
+                 /> 
+
+       <field name="recurring" type="radio"
+                
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_RECURRING"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_RECURRING" 
+                 default="0" 
+                
+                >
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+        </field> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_JDSUBSCRIPTIONS_FORM_LBL_PLAN_CREATED_BY"
+            description="COM_JDSUBSCRIPTIONS_FORM_DESC_PLAN_CREATED_BY"  /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

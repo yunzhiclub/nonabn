@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="id" type="text" default="0" label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_ID"
+               readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC" /> 
+            
+        <field name="subscriber" type="user"               
+               label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_SUBSCRIBER"
+               description="COM_JDSUBSCRIPTIONS_FORM_DESC_ORDER_SUBSCRIBER"               
+                 /> 
+        
+        <field name="subscriber_email" type="text" default="" label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_EMAIL"
+               description="COM_JDSUBSCRIPTIONS_FORM_DESC_ORDER_EMAIL" /> 
+
+        <field name="filter_subscriber" type="user" onchange="this.form.submit();" /> 
+         
+
+        <field name="subscription_plan" type="sql" class="inputbox"     
+               label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_SUBSCRIPTION_PLAN"
+               description="COM_JDSUBSCRIPTIONS_FORM_DESC_ORDER_SUBSCRIPTION_PLAN"                       
+               query="SELECT 0 AS `id`, '- Select Subscription -' AS `name` UNION SELECT `id`, `name` FROM `#__jdsubscriptions_plans`" key_field="id" value_field="name"
+         /> 
+
+        <field name="filter_plan" type="sql" class="inputbox"
+               onchange="this.form.submit();"
+               query="SELECT 0 AS `id`, '- Select Subscription -' AS `name` UNION SELECT `id`, `name` FROM `#__jdsubscriptions_plans`" key_field="id" value_field="name"
+             /> 
+      
+       
+        <field name="subscription_amount" type="text" default="" label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_AMOUNT"
+               description="COM_JDSUBSCRIPTIONS_FORM_DESC_ORDER_AMOUNT" /> 
+        
+        <field name="order_date" type="calendar"
+                
+                label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_DATE"
+                description="COM_JDSUBSCRIPTIONS_FORM_DESC_ORDER_DATE" 
+                                              
+                filter="raw" /> 
+       
+        <field name="pp_transaction_id" type="text" default="" label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_PAYPAL"
+               description="COM_JDSUBSCRIPTIONS_FORM_DESC_ORDER_PAYPAL" /> 
+        
+        
+        <field name="created_by" type="createdby" default="" 
+               label="COM_JDSUBSCRIPTIONS_FORM_LBL_ORDER_CREATED_BY"
+               description="COM_JDSUBSCRIPTIONS_FORM_DESC_ORDER_CREATED_BY"  /> 
+
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field> 
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+    </fieldset>
+
+</form>

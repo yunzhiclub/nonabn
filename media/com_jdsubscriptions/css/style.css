@@ -1,0 +1,218 @@
+a{
+    text-decoration: none;
+}
+
+li{
+    line-height:1.7em;
+}
+
+h2{
+    margin-bottom:5px !important;
+}
+
+img.border{
+    border:1px solid #ccc;padding:4px;
+}
+
+.clr{
+    clear:both;
+}
+
+.active{
+    color:green;
+}
+
+.not-active{
+    color:red;
+}
+
+/* Grey Button */
+.grey_btn {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+    background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+    background-color:#f9f9f9;
+    -webkit-border-top-left-radius:9px;
+    -moz-border-radius-topleft:9px;
+    border-top-left-radius:9px;
+    -webkit-border-top-right-radius:9px;
+    -moz-border-radius-topright:9px;
+    border-top-right-radius:9px;
+    -webkit-border-bottom-right-radius:9px;
+    -moz-border-radius-bottomright:9px;
+    border-bottom-right-radius:9px;
+    -webkit-border-bottom-left-radius:9px;
+    -moz-border-radius-bottomleft:9px;
+    border-bottom-left-radius:9px;
+    text-indent:0;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#666666 !important;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:29px;
+    line-height:29px;
+    width:100px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #ffffff;
+}
+.grey_btn:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9) );
+    background:-moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+    background-color:#e9e9e9 !important;
+}.grey_btn:active {
+    position:relative;
+    top:1px;
+}
+
+.bottom_save{
+    margin:20px 0 15px 20px;
+}
+
+/* Subscription Pages */
+
+#subscriptions h3{
+    font-size:16px;
+}
+.subscriptions_list{
+    list-style:none !important;
+    position:relative;
+}
+
+.subscriptions_left{
+    float:left;
+    width:25%;
+}
+
+.subscriptions_right{
+    float:left;
+    width:60%;
+}
+
+#subscriptions ul.specs{
+    padding:5px;
+    background:#f4f4f4;
+    padding-left:30px;
+    overflow:hidden;
+}
+
+.spec_items{
+    float:left;
+    width:200px;
+}
+
+.buynow{
+    float:right;
+    width:100px;
+    padding:10px 10px 0 0;
+}
+
+p.login_purchase{
+    font-weight:bold;
+    color:red;
+}
+
+#subscription h4{
+    font-size:18px !important;
+    font-weight:bold;  
+}
+
+#subscription .subscription_img{
+    float:left;
+    overflow:hidden;
+    margin-right:10%;
+}
+
+#subscription .subscription_specs{
+    float:left;
+    width:40%;
+    margin-top:30px;
+    padding:20px;
+    border-radius:5px;
+    background:#f4f4f4;
+    border:#ccc solid 1px;
+}
+
+#subscription .subscription_specs ul li{
+    font-size:15px;
+}
+
+#subscription .subscription_description{
+    margin:0 0 20px 0;
+    display:block;
+}
+
+#subscription .subscription_description_heading{
+    padding:5px;
+    background:#f4f4f4;
+    border:#ccc solid 1px;
+}
+
+a.create_ad{
+    background:#f4f4f4;
+    color:#666;
+    padding:10px;
+    border-radius:5px;
+    border:#ccc solid 1px;
+}
+
+ul.order_list{
+    list-style:none;
+}
+
+ul.order_list li{
+    padding:10px 0 10px 0 !important;
+    border-bottom:#ccc dashed 1px;
+    list-style:none !important;
+}
+
+#mysubscription h4{
+    font-size:16px;
+    padding:5px 0 5px 0;
+    margin:5px 0 5px 0;
+    background:#f4f4f4;
+    display:block;
+}
+
+#mysubscriptions table{
+    width:100%;
+    border:0 !important;
+}
+
+#mysubscriptions table th,#mysubscriptions table td{
+    padding:5px;
+}
+
+
+/* Start Media Queries */
+
+@media only screen and (min-width : 240px)  and (max-width : 900px) {
+    .subscriptions_left{
+        float:none;
+        width:100%;
+    }
+
+    .subscriptions_right{
+        float:none;
+        width:100%;
+    }
+
+    #subscription .subscription_img{
+        float:none;
+        margin:auto;
+        text-align: center;
+        width:100%;
+    }
+
+    .subscription_specs{
+        float:none !important;;
+        width:90% !important;;
+    }
+}

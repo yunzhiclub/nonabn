@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_jdsubscriptions</name>
+    <creationDate>2013-11-17</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Brad Traversy</author>
+    <authorEmail>support@joomdigi.com</authorEmail>
+    <authorUrl>http://www.joomdigi.com</authorUrl>
+    <version>1.0.5</version>
+    <description>JD Subscriptions is a component that will let your users signup for a custom subscription which can be paid one-time, weekly, monthly or yearly.</description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update> <!-- Runs on update; New in 1.6 -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/</schemapath>
+            <!-- <schemapath type="sqlsrv">sql/updates/sqlsrv</schemapath> -->
+        </schemas>
+    </update>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>jdsubscriptions.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">
+        
+        <language tag="en-GB">language/en-GB.com_jdsubscriptions.ini</language>
+    </languages>
+    <media destination="com_jdsubscriptions" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+    <administration>
+        <menu img="components/com_jdsubscriptions/assets/images/s_com_jdsubscriptions.png" >COM_JDSUBSCRIPTIONS</menu>
+        <submenu>
+            <menu link="option=com_jdsubscriptions&amp;view=cpanel" view="cpanel" img="components/com_jdsubscriptions/assets/images/s_cpanel.png" alt="Jdsubscriptions/Cpanel">COM_JDSUBSCRIPTIONS_TITLE_CPANEL</menu>
+            
+            <menu link="option=com_jdsubscriptions&amp;view=plans" view="plans" img="components/com_jdsubscriptions/assets/images/s_plans.png" alt="Jdsubscriptions/Plans">COM_JDSUBSCRIPTIONS_TITLE_PLANS</menu>
+
+            <menu link="option=com_jdsubscriptions&amp;view=subscriptions" view="subscriptions" img="components/com_jdsubscriptions/assets/images/s_subscriptions.png" alt="Jdsubscriptions/Subscriptions">COM_JDSUBSCRIPTIONS_TITLE_SUBSCRIPTIONS</menu>
+
+            
+            <menu link="option=com_jdsubscriptions&amp;view=subscribers" view="subscribers" img="components/com_jdsubscriptions/assets/images/s_subscribers.png" alt="Jdsubscriptions/Subscribers">COM_JDSUBSCRIPTIONS_TITLE_SUBSCRIBERS</menu>
+
+            <menu link="option=com_jdsubscriptions&amp;view=orders" view="orders" img="components/com_jdsubscriptions/assets/images/s_orders.png" alt="Jdsubscriptions/Orders">COM_JDSUBSCRIPTIONS_TITLE_ORDERS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>jdsubscriptions.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            
+            <language tag="en-GB">language/en-GB.com_jdsubscriptions.ini</language>
+            <language tag="en-GB">language/en-GB.com_jdsubscriptions.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->

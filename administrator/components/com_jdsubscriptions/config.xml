@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	  <!--GENERAL-->
+	<fieldset name="general"
+		label="COM_JDSUBSCRIPTIONS_GENERAL_LABEL"
+		description="COM_JDSUBSCRIPTIONS_GENERAL_DESC"
+	>
+
+        <field name="allow_guests" 
+              type="radio" 
+              default="0" 
+              label="COM_JDSUBSCRIPTIONS_FIELD_SELECT_ALLOW_GUESTS_LABEL" 
+              description="COM_JDSUBSCRIPTIONS_FIELD_SELECT_ALLOW_GUESTS_DESC">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+        </field> 
+        
+         <field name="debug_mode" 
+              type="radio" 
+              default="0" 
+              label="COM_JDSUBSCRIPTIONS_FIELD_SELECT_DEBUG_MODE_LABEL" 
+              description="COM_JDSUBSCRIPTIONS_FIELD_SELECT_DEBUG_MODE_DESC">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+        </field> 
+        
+         <field name="mysubscription_layout" 
+              type="list" 
+              default="0" 
+              label="COM_JDSUBSCRIPTIONS_FIELD_SELECT_MYSUBSCRIPTION_LAYOUT_LABEL" 
+              description="COM_JDSUBSCRIPTIONS_FIELD_SELECT_MYSUBSCRIPTION_LAYOUT_DESC">
+              <option value="tabs">Tabs</option>
+              <option value="accordian">Accordian</option>
+              <option value="lists">Lists</option>
+        </field> 
+
+	</fieldset>
+        
+         <!--PAYMENT-->
+        <fieldset name="payment"
+		label="COM_JDSUBSCRIPTIONS_PAYMENT_LABEL"
+		description="COM_JDSUBSCRIPTIONS_PAYMENT_DESC"
+	>                
+       
+        <!--PayPal Email-->
+        <field
+                 name="paypal_email"
+                 type="text"               
+                 label="COM_JDSUBSCRIPTIONS_FIELD_SELECT_PAYPAL_EMAIL_LABEL"   
+                 default="sales@joomdigi.com"           
+                 description="COM_JDSUBSCRIPTIONS_FIELD_SELECT_PAYPAL_EMAIL_DESC">
+         </field>                  
+       <!--Currency-->
+       <field
+                 name="paypal_currency"
+                 type="text"               
+                 label="COM_JDSUBSCRIPTIONS_FIELD_SELECT_PAYPAL_CURRENCY_LABEL"   
+                 default="USD"           
+                 description="COM_JDSUBSCRIPTIONS_FIELD_SELECT_PAYPAL_CURRENCY_DESC">
+       </field>  
+             
+
+	</fieldset>
+
+
+	<fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL"
+	>
+
+		<field 
+            name="rules" 
+            type="rules"
+			component="com_jdsubscriptions"
+            class="inputbox"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+
+</config>
